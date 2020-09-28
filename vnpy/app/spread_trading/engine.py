@@ -1038,7 +1038,7 @@ class SpreadStrategyEngine:
         start = end - timedelta(days)
 
         bars = load_bar_data(spread, interval, start, end)
-
+        print(f'本次初始化读取bar数量为： {len(bars)} 条')
         for bar in bars:
             callback(bar)
 
